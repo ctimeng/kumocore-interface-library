@@ -1,0 +1,1 @@
+export { isWalletInstalled } from "./wallet";
