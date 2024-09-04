@@ -26,7 +26,7 @@ export const getBrowser = () => {
 };
 
 export const getMobileOperatingSystem = (): string => {
-	const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera;
+	const userAgent = window.navigator.userAgent || window.navigator.vendor;
 
 	if (/windows phone/i.test(userAgent)) {
 		return MobileOS.window;
@@ -36,7 +36,7 @@ export const getMobileOperatingSystem = (): string => {
 		return MobileOS.android;
 	}
 
-	if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+	if (/iPad|iPhone|iPod/.test(userAgent)) {
 		return MobileOS.window;
 	}
 
