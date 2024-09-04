@@ -1,1 +1,1 @@
-export { isWalletInstalled } from "./wallet";
+export { isWalletInstalled, getBrowser, getMobileOperatingSystem } from "./wallet";
