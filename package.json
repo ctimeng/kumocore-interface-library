@@ -1,6 +1,6 @@
 {
   "name": "kumocore-interface-library",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
@@ -8,16 +8,11 @@
   "files": [
     "dist"
   ],
-  "peerDependencies": {
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1"
-  },
   "scripts": {
-    "rollup": "rollup -c --bundleConfigAsCjs",
-    "build1": "tsc --project tsconfig.build.json",
-    "test1": "jest --config ./test/jest.config.js --runInBand",
-    "test": "jest",
-    "build": "tsup"
+    "build-rollup": "rollup -c --bundleConfigAsCjs",
+    "build-tsc": "tsc --project tsconfig.build.json",
+    "build-tsup": "tsup",
+    "test": "jest"
   },
   "author": "Vodworks",
   "license": "UNLICENSED",
