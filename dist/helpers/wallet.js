@@ -32,14 +32,14 @@ const getBrowser = () => {
 };
 exports.getBrowser = getBrowser;
 const getMobileOperatingSystem = () => {
-    const userAgent = window.navigator.userAgent || window.navigator.vendor;
+    const userAgent = window.navigator.userAgent || window.navigator.vendor || window.opera;
     if (/windows phone/i.test(userAgent)) {
         return wallet_1.MobileOS.window;
     }
     if (/android/i.test(userAgent)) {
         return wallet_1.MobileOS.android;
     }
-    if (/iPad|iPhone|iPod/.test(userAgent)) {
+    if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
         return wallet_1.MobileOS.window;
     }
     return wallet_1.MobileOS.unknown;
