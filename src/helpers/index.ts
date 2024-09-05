@@ -1,1 +1,1 @@
-export { isWalletInstalled } from "./wallet";
+export * from "./wallet";

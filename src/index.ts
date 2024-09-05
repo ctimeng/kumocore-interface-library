@@ -1,3 +1,2 @@
-//export * from './helpers';
-//export * from './types';
-export { isWalletInstalled } from "./helpers/wallet";
+export * from './helpers';
+export * from './types';

@@ -1,18 +1,23 @@
 {
   "name": "kumocore-interface-library",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
-  "main": "dist/cjs/index.js",
-  "module": "dist/esm/index.js",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
+  "peerDependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
   "scripts": {
-    "rollup": "rollup -c",
-    "build": "tsc --project tsconfig.build.json",
+    "rollup": "rollup -c --bundleConfigAsCjs",
+    "build1": "tsc --project tsconfig.build.json",
     "test1": "jest --config ./test/jest.config.js --runInBand",
-    "test": "jest"
+    "test": "jest",
+    "build": "tsup"
   },
   "author": "Vodworks",
   "license": "UNLICENSED",
@@ -24,6 +29,7 @@
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@swc/core": "^1.7.23",
     "@testing-library/react": "^16.0.1",
     "@types/jest": "^29.5.12",
     "@types/react": "^18.3.5",
@@ -34,6 +40,7 @@
     "rollup-plugin-postcss": "^4.0.2",
     "ts-jest": "^29.2.5",
     "tslib": "^2.7.0",
+    "tsup": "^8.2.4",
     "typescript": "^5.5.4"
   },
   "repository": {
