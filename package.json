@@ -1,6 +1,6 @@
 {
   "name": "kumocore-interface-library",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "",
   "main": "dist/cjs/index.js",
   "module": "dist/esm/index.js",
@@ -10,7 +10,9 @@
   ],
   "scripts": {
     "rollup": "rollup -c",
-    "build": "tsc --project tsconfig.build.json"
+    "build": "tsc --project tsconfig.build.json",
+    "test1": "jest --config ./test/jest.config.js --runInBand",
+    "test": "jest"
   },
   "author": "Vodworks",
   "license": "UNLICENSED",
@@ -19,23 +21,24 @@
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
-    "@babel/core": "^7.25.2",
-    "@babel/preset-env": "^7.25.4",
-    "@babel/preset-react": "^7.24.7",
     "@rollup/plugin-commonjs": "^26.0.1",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-typescript": "^11.1.6",
+    "@testing-library/react": "^16.0.1",
+    "@types/jest": "^29.5.12",
     "@types/react": "^18.3.5",
+    "jest": "^29.7.0",
     "rollup": "^2.79.1",
-    "rollup-plugin-babel": "^4.4.0",
     "rollup-plugin-dts": "^6.1.1",
     "rollup-plugin-peer-deps-external": "^2.2.4",
     "rollup-plugin-postcss": "^4.0.2",
+    "ts-jest": "^29.2.5",
     "tslib": "^2.7.0",
     "typescript": "^5.5.4"
   },
   "repository": {
     "type": "https",
     "url": "https://github.com/ctimeng/kumocore-interface-library.git"
-  }
+  },
+  "type": "module"
 }
